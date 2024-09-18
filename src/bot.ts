@@ -5,6 +5,10 @@ const BOT_TOKEN = Deno.env.get("BOT_TOKEN") as string;
 export const bot = new Bot(BOT_TOKEN);
 const kv = await Deno.openKv();
 
+bot.command("ping", async (ctx) => {
+  await ctx.reply("pong");
+});
+
 bot
   .command("set")
   .filter((ctx) => {
