@@ -12,7 +12,7 @@ bot.command("ping", async (ctx) => {
 bot
   .command("set")
   .filter((ctx) => {
-    return ctx.from?.id === Deno.env.get("ADMIN_ID");
+    return ctx.from?.id === +(Deno.env.get("ADMIN_ID") as string);
   })
   .use(async (ctx) => {
     await kv.set(["link"], ctx.match);
