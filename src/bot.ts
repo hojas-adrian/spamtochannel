@@ -32,7 +32,7 @@ bot.on("channel_post", async (ctx) => {
 
   await ctx.editMessageReplyMarkup({
     reply_markup: new InlineKeyboard().url(
-      "Entra aqui para apoyar al canal ",
+      "Ver TikTok dentro de Telegram",
       link.value
     ),
   });
